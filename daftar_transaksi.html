@@ -11,8 +11,11 @@
   <header>
     <img src="logo.png" alt="Logo Perpustakaan" class="logo" />
     <nav>
-      <ul class="navbar-nav ms-auto" id="nav-menu">
-  <!-- Akan diisi otomatis lewat JavaScript -->
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="transaksi.html">Transaksi</a></li>
+        <li><a href="profil.html">Profil</a></li>
+        <li><a href="login.html">Login</a></li>
       </ul>
     </nav>
   </header>
@@ -49,26 +52,5 @@
   <footer>
     <p>&copy; 2025 Admin Perpustakaan - Bajakan lah enak gratis</p>
   </footer>
-<script>
-  function logout() {
-    localStorage.removeItem("loggedIn");
-    alert("Logout berhasil!");
-    window.location.href = "login.html";
-  }
-
-  const navMenu = document.getElementById("nav-menu");
-  const isLoggedIn = localStorage.getItem("loggedIn") === "true";
-
-  navMenu.innerHTML = `
-    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
-    ${isLoggedIn ? `
-      <li class="nav-item"><a class="nav-link" href="transaksi.html">Transaksi</a></li>
-      <li class="nav-item"><a class="nav-link" href="profil.html">Profil</a></li>
-      <li class="nav-item"><a class="nav-link" href="#" onclick="logout()">Logout</a></li>
-    ` : `
-      <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-    `}
-  `;
-</script>
 </body>
 </html>
