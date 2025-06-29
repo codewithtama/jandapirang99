@@ -6,6 +6,12 @@
   <title>Transaksi - Admin Perpustakaan</title>
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
+<script>
+  if (localStorage.getItem("loggedIn") !== "true") {
+    alert("Silakan login terlebih dahulu.");
+    window.location.href = "login.html";
+  }
+</script>
 </head>
 <body>
   <header>
