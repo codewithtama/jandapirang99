@@ -10,8 +10,11 @@
   <header>
     <img src="logo.png" alt="Logo Perpustakaan" class="logo" />
     <nav>
-      <ul class="navbar-nav ms-auto" id="nav-menu">
-  <!-- Akan diisi otomatis lewat JavaScript -->
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="transaksi.html">Transaksi</a></li>
+        <li><a href="profil.html">Profil</a></li>
+        <li><a href="login.html">Login</a></li>
       </ul>
     </nav>
   </header>
@@ -28,21 +31,5 @@
   <footer>
     <p>&copy; 2025 Admin Perpustakaan - Bajakan lah enak gratis</p>
   </footer>
-<script>
-  function loginValidation() {
-    const user = document.getElementById("username").value;
-    const pass = document.getElementById("password").value;
-
-    if (user === "admin" && pass === "12345") {
-      localStorage.setItem("loggedIn", "true");
-      alert("Login berhasil!");
-      window.location.href = "index.html";
-      return false; // penting: jangan reload form!
-    } else {
-      alert("Username atau Password salah.");
-      return false;
-    }
-  }
-</script>
 </body>
 </html>
