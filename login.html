@@ -32,27 +32,6 @@
     <p>&copy; 2025 Admin Perpustakaan - Bajakan lah enak gratis</p>
   </footer>
 <script>
-  function logout() {
-    localStorage.removeItem("loggedIn");
-    alert("Logout berhasil!");
-    window.location.href = "login.html";
-  }
-
-  const navMenu = document.getElementById("nav-menu");
-  const isLoggedIn = localStorage.getItem("loggedIn") === "true";
-
-  navMenu.innerHTML = `
-    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
-    ${isLoggedIn ? `
-      <li class="nav-item"><a class="nav-link" href="transaksi.html">Transaksi</a></li>
-      <li class="nav-item"><a class="nav-link" href="profil.html">Profil</a></li>
-      <li class="nav-item"><a class="nav-link" href="#" onclick="logout()">Logout</a></li>
-    ` : `
-      <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-    `}
-  `;
-</script>
-<script>
   function loginValidation() {
     const user = document.getElementById("username").value;
     const pass = document.getElementById("password").value;
@@ -68,6 +47,5 @@
     }
   }
 </script>
-
 </body>
 </html>
