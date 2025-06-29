@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Profil - Admin Perpustakaan</title>
   <link rel="stylesheet" href="style.css" />
+<script>
+  if (localStorage.getItem("loggedIn") !== "true") {
+    alert("Silakan login terlebih dahulu.");
+    window.location.href = "login.html";
+  }
+</script>
 </head>
 <body>
   <header>
