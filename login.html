@@ -57,18 +57,17 @@
     const user = document.getElementById("username").value;
     const pass = document.getElementById("password").value;
 
-    // Cek user dan password
     if (user === "admin" && pass === "12345") {
-      // Simpan status login ke localStorage
       localStorage.setItem("loggedIn", "true");
       alert("Login berhasil!");
       window.location.href = "index.html";
-      return false;
+      return false; // penting: jangan reload form!
     } else {
       alert("Username atau Password salah.");
       return false;
     }
   }
 </script>
+
 </body>
 </html>
